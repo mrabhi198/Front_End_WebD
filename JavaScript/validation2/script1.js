@@ -1,6 +1,7 @@
 function check(){
     var a = document.getElementById('name').value;
     var b = document.getElementById('pwd').value;
+    var d = document.getElementById('cpwd').value;
     var c = document.getElementById('email').value;
 
     //for name
@@ -15,15 +16,23 @@ function check(){
     }
 
     //for password
-    if (b.length >= 8 || b.length <= 16){
+    if (b.length < 8 || b.length > 16){
         document.getElementById("pwd1").innerHTML = "Password must be greater than or equal to 8 and less than or equal to 16";
-    }
-    else {
+    } else {
         document.getElementById("pwd1").innerHTML = "";
     }
 
+    //confirm password
+    if  (d != b) {
+        document.getElementById('cpwd1').innerHTML = "Password is not match!"
+    } else {
+        document.getElementById('cpwd').innerHTML = ""
+    }
     //for email
-    if (){
-        
+    var emailVal = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailVal.test(c)) {
+        document.getElementById("email1").innerHTML = "Enter a valid email address.";
+    } else {
+        document.getElementById("email1").innerHTML = "";
     }
 }
