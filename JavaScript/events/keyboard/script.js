@@ -1,14 +1,14 @@
-function key_event(color){
+function key_event(){
     var input = document.getElementById('down');
     input.style.backgroundColor = color;
 }
 
-function key_event1(color){
+function key_event1(){
     var input1 = document.getElementById('up');
     input1.style.backgroundColor = color;
 }
 
-function key_event2(color){
+function key_event2(){
     var input2 = document.getElementById('press');
     input2.style.backgroundColor = color;
 }
