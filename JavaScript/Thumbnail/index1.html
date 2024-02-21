@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flower</title>
+	<style>
+        .flower {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-color: #f5f5dc;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	background-color: #ffde00;
+	border-radius: 50%;
+}
+
+.petal {
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	background-color: #ff6961;
+}
+
+.p1 {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%) rotate(0deg);
+}
+
+.p2 {
+	top: 40%;
+	left: 25%;
+	transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.p3 {
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.p4 {
+	top: 40%;
+	left: 75%;
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.p5 {
+	top: 50%;
+	left: 100%;
+	transform: translate(-50%, -50%) rotate(120deg);
+}
+
+.p6 {
+	top: 60%;
+	left: 75%;
+	transform: translate(-50%, -50%) rotate(150deg);
+}
+
+button {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 5px 10px;
+	background-color: #ff6961;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+    </style>
+</head>
+<body>
+	<div class="flower">
+		<div class="center" id="center"></div>
+		<div class="petal p1"></div>
+		<div class="petal p2"></div>
+		<div class="petal p3"></div>
+		<div class="petal p4"></div>
+		<div class="petal p5"></div>
+		<div class="petal p6"></div>
+		<button id="changeColor">Change Color</button>
+	</div>
+	<script>
+        const center = document.getElementById("center");
+const petals = document.querySelectorAll(".petal");
+const button = document.getElementById("changeColor");
+let colorIndex = 0;
+
+button.addEventListener("click", () => {
+	if (colorIndex % 2 === 0) {
+		center.style.backgroundColor = getRandomColor();
+	} else {
+		petals.forEach((petal, index) => {
+			petal.style.backgroundColor = getRandomColor();
+		});
+	}
+	colorIndex++;
+});
+
+function getRandomColor() {
+	const letters = "0123456789ABCDEF";
+	let color = "#";
+	for (let i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color; // return the generated color
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main, #tn img{
+            box-shadow: 2px 2px 2px black;
+            border-radius: 10px;
+        }
+
+        #tn img{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 50%; /* Make images circular */
+            cursor: pointer; /* Add cursor pointer for clickable effect */
+        }
+
+        #tn{
+            text-align: center;
+        }
+
+        #main{
+            width: 40%;
+            height: 300px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="h.webp" id="main">
+    <div id="tn">
+        <img src="a.jpg">
+        <img src="b.jpg">
+        <img src="c.webp">
+        <img src="d.webp">
+        <img src="e.webp">
+    </div>
+
+    <script>
+        var a = document.getElementById("tn");
+        var b = a.getElementsByTagName("img");
+        var c = document.getElementById("main");
+
+        for(let i = 0; i < b.length; i++){
+            let d = b[i];
+            d.addEventListener("click", function(){
+                c.src=this.src;
+            })
+        }
+    </script>
+
+</body>
+</html>
