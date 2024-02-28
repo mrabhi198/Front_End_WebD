@@ -1,0 +1,10 @@
+$("*")                      -> for universal
+$("ul li")
+$(".abc, .xyz")      -> access abc and xyz class
+$("p.first")           -> select first paragraph
+$("p.last")         -> select last para
+$("li:even")
+
+
+Task:
+    1. create a table in which datesheet of midterm will be displayed, you have to apply 

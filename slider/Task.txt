@@ -1,0 +1,7 @@
+create a input field and a  submit button that input field will be file uploading. the should not be more than 4mb, if it more than 4 mb it will generate error msg in span
+
+
+
+Task:
+    1. create two variables, 1st = 100, 2nd = 0, you have to throw exception which states number can not be divied by 0.
+    2. create a function inside script, initialize variable a and b with some value and use exception handling method in which your're tring to display the value of c variable which is neither declare nor difine 
