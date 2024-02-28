@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #box{
+            width: 300px;
+            height: 150px;
+            border: 2px solid black;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <p id="box">
+        Certainly! Here's a sample paragraph:
+        "The sun dipped low on the horizon, 
+        casting long shadows across the tranquil meadow. 
+        The gentle rustle of leaves and the distant chirping of birds filled the air, 
+        creating a serene ambiance. As the day drew to a close, 
+        a sense of calm enveloped the landscape, 
+        inviting contemplation and reflection. In the distance, 
+        a lone figure wandered, lost in thought, 
+        their silhouette blending seamlessly with the fading light. 
+        It was a moment of quiet beauty, a fleeting glimpse of nature's timeless rhythm."
+    </p>
+    
+    <script>
+        $(document).ready(function(){
+            $("body").keypress(function(){
+                $("body").css("background","orange");
+            });
+
+            $("body").keydown(function(){
+                $("body").css("background","aqua");
+            });
+
+            $("body").keyup(function(){
+                $("body").css("background","green");
+            });
+
+            // $("#box").mouseleave(function(){
+            //     $("#box").css("color","white");
+            // });
+        })
+    </script>
+</body>
+</html>
