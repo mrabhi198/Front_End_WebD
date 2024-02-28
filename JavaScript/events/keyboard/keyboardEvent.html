@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Event Example</title>
+</head>
+<body>
+
+<input type="text" id="input-field" placeholder="Type something...">
+
+<script>
+    const inputField = document.getElementById('input-field');
+
+    // Event listener for keydown
+    inputField.addEventListener('keydown', function(event) {
+        console.log('Key pressed:', event.key);
+        // Example action: If 'Enter' key is pressed, alert the value of the input field
+        if (event.key === 'Enter') {
+            alert('You typed: ' + inputField.value);
+        }
+    });
+</script>
+
+</body>
+</html>

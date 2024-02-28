@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Event Example</title>
+<style>
+    #change-color {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        text-align: center;
+        line-height: 200px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="change-color">Hover over me!</div>
+
+<script>
+    const element = document.getElementById('change-color');
+
+    // Event listener for mouseover
+    element.addEventListener('mouseover', function() {
+        element.style.backgroundColor = '#e4813c';
+        element.textContent = 'Mouse Over';
+    });
+
+    // Event listener for mouseout
+    element.addEventListener('mouseout', function() {
+        element.style.backgroundColor = '#8d3944';
+        element.textContent = 'Hover over me!';
+    });
+</script>
+
+</body>
+</html>

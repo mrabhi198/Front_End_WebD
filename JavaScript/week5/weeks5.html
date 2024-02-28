@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryabhatta</title>
+<style>
+  #aryabhatta-img {
+    display: block;
+  }
+  #table {
+    display: none;
+  }
+  #factorial {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<img id="aryaImg" src="a.jpg" alt="Aryabhatta">
+
+<button id="btn">click here</button>
+
+<table id="table">
+</table>
+
+<div id="fac">
+</div>
+
+<script>
+  const arya = document.getElementById('aryaImg');
+  const table = document.getElementById('table');
+  const fact = document.getElementById('fac');
+  const btn = document.getElementById('btn');
+
+  let isTableShown = false;
+
+  function toggleDisplay() {
+    if (isTableShown) {
+      table.style.display = 'none';
+      fact.style.display = 'block';
+    } 
+    
+    else {
+      table.style.display = 'block';
+      fact.style.display = 'none';
+    }
+
+    isTableShown = !isTableShown;
+  }
+
+  btn.addEventListener('click', toggleDisplay);
+
+  function generateTable() {
+    for(var i = 1; i < 11; i++){
+        var t = 2 * i; 
+    }
+    console.log(t);
+  }
+
+  // Function to generate factorial content
+  function generateFactorial() {
+    // Generate factorial content here
+  }
+</script>
+
+</body>
+</html>
