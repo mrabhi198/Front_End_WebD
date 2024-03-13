@@ -16,6 +16,10 @@
         $('#name').keyup(function(){
             if($('#name').val()!=''){
                 $('#btn').removeAttr('disabled');
+            } 
+            
+            else if($('#name').val()==''){
+                $('#btn').attr('disabled', "true");
             }
         });
     </script>
