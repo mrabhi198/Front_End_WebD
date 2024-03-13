@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr id="head">
+                <th colspan="3" id="title">DateSheet</th>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <th>Timimg</th>
+                <th>Room No.</th>
+            </tr>
+
+            <tr>
+                <td>OS</td>
+                <td>9:30-10:30</td>
+                <td>38-916</td>
+            </tr>
+            <tr>
+                <td>GenAI</td>
+                <td>10:30-11:30</td>
+                <td>37-914</td>
+            </tr>
+            <tr>
+                <td>DAA</td>
+                <td id="d">11:30-12:30</td>
+                <td>36-912</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function(){
+            $("#t").css("border","2px solid black")
+            $("#head").css("alignment","centre")
+            $("td").css("padding","1rem")
+            $("th").css("padding","1rem")
+            $("#title").css("backgroundColor","yellow")
+            $("table").css("border","2px solid red")
+            $("td").css("border","2px solid red")
+            $("th").css("border","2px solid red")
+            $("table").css("borderCollapse","collapse")
+            $("table").css("margin","auto")
+            $("#d").css("color","orange")
+        })
+    </script>
+</body>
+</html>

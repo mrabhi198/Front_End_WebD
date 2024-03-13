@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window_event</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #box{
+        width: 300px;
+        height: 150px;
+        border: 2px solid black;
+        overflow: auto;     /* to fit paragraph inside scroll */
+    }
+    </style>
+</head>
+<body>
+    <p id="box">
+        jQuery is a versatile JavaScript library designed to simplify client-side scripting in web development. One of its core features is event handling, which allows developers to create dynamic and interactive web pages by responding to user actions such as clicks, mouse movements, and keyboard inputs. With jQuery, you can easily attach event handlers to HTML elements using concise syntax, making it straightforward to add interactivity to your web applications. Event handling in jQuery follows the principle of unobtrusive JavaScript, promoting separation of behavior from markup and enhancing code maintainability. By leveraging jQuery's event handling capabilities, developers can create rich user experiences that enhance usability and engagement on the web.</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#box").scroll(function(){
+                for(let i = 0; i <= 100; i++){
+                    console.log("You are just scrolling....");
+                }
+            });
+
+            $(window).resize(function(){
+                for(let i = 0; i <= 100; i++){
+                    console.log("You are just resizing....");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

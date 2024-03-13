@@ -1,0 +1,1 @@
+create one para, one heading and one span tag inside a div, then outside div... you have create two button whenever you are clickinh on the first button, content inside the div will be vanished, whenever clicking on the 2nd button div will be vanished.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_Events</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form action="#" autocomplete="off" id="form" >
+        <input type="text" id="one"> <br><br>
+        <input type="password" id="pwd"><br><br>
+        <select name="subject" id="sub">
+            <option value="OS">OS</option>
+            <option value="DSA">DSA</option>
+            <option value="HTML">HTML</option>
+        </select><br><br> <!-- Remove this line -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#one").focus(function(){
+                $("#one").css("backgroundColor","green");
+            });
+
+            $("#one").blur(function(){
+                $("#one").css("backgroundColor","");
+            });
+
+            $("#pwd").focus(function(){
+                $("#pwd").css("backgroundColor","green");
+            });
+
+            $("#pwd").blur(function(){
+                $("#pwd").css("backgroundColor","");
+            });
+            
+            $("#one").select(function(){
+                $("#one").css("backgroundColor","pink");
+            });
+
+            $("#sub").change(function(){
+                $("#sub").css("backgroundColor","skyblue");
+            });
+
+            $("#form").submit(function(){
+                // alert("Abhi")
+                let count;
+                for(let i = 1; i <= 5; i++){
+                    // count = 1;
+                    let line = "";
+                    for(let j = 1; j <=i; j++){
+                        line = line + j + " ";
+                        // count++;
+                    }
+                    console.log(line);
+                }
+                
+                
+            });
+        })
+    </script>
+</body>
+</html>

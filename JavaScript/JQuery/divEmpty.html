@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanish Content</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <style>
+    .b {
+        border: 2px solid black;
+        padding: 10px;
+        margin-bottom: 10px;
+
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="a">
+    <div class="b">
+      <h1 id="h1">Abc</h1>
+      <p id="p">ijk.</p>
+      <span id="s">xyz</span>
+    </div>
+  </div>
+  <button onclick="hideCon()">Empty</button>
+  <button onclick="hideDiv()">Remove</button>
+
+  <script>
+    function hideCon() {
+      $('.b').empty();
+    }
+
+    function hideDiv() {
+      $('#a').remove();
+    }
+  </script>
+</body>
+</html>
