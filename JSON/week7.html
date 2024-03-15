@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="s"></p>
+    <p id="p"></p>
+    <p id="x"></p>
+    <p id="y"></p>
+<script>
+    var student, subject;
+    student = {
+        "name":"Abhi","rollNo":43,"attendance":90,
+        "subjects":[
+            {
+                "subName":"OS","subTeacher":["Soni", "Singh"]
+            },
+            {
+                "subName":"FrontEnd","subTeacher":["Palvi", "Soni"]
+            }
+        ]
+        
+    }
+    var sub ="";
+    for(i in student.subjects){
+        sub += "<b>Subject: " + student.subjects[i].subName + "</b><br>";
+            sub += "Teachers: ";
+            for (var j = 0; j < student.subjects[i].subTeacher.length; j++) {
+                sub += student.subjects[i].subTeacher[j];
+                if (j < student.subjects[i].subTeacher.length - 1) {
+                    sub += ", ";
+                }
+            }
+            sub += "<br>";
+    }
+    document.getElementById("p").innerHTML = sub;
+
+    // var sh = JSON.stringify(student);
+    // // document.getElementById("s").innerHTML=sh;
+    // var ab = JSON.parse(sh);
+    // document.getElementById("p").innerHTML ="Name: " + ab.name;
+    // document.getElementById("x").innerHTML ="RollNo: " + ab.rollNo;
+    // document.getElementById("y").innerHTML ="Attendance: " + ab.attendance;
+</script>
+</body>
+</html>

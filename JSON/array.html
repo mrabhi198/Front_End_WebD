@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <p id="a"></p>
+    <script>
+        const sub = '["OS","NodeJs","JavaScript","Java","Analytical","GenAI","DAA"]'; 
+        const sub1 = JSON.parse(sub);
+        if(sub[0] == "OS"){
+            sub[0] == "DBMS";
+            document.getElementById("a").innerHTML = sub1.join(", ");
+        }
+        document.getElementById("p").innerHTML = sub1.join(", ");
+        document.getElementById("a").innerHTML = sub1.join(", ");
+
+    </script>
+</body>
+</html>

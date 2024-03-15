@@ -1,0 +1,5 @@
+create an array, that comperises the 7 subjects that you re learning in this sem, then u have toh display the 5th ele of the array, if aEle[0] == OS, have to replace with dbms and access the 5th element and display on screen
+
+week 7:
+    create an obj student in which you have to write the keys as name, rollNo, attendance, subjects, you have to create array of subjects their the keys will be subject name, and course teacher name, concidaring course teacher as nested array then you have to display the subject and coresponding teacher name
+    (in teacher name you have to pass first name and last name of the teacher) 

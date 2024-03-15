@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="s"></p>
+    <p id="p"></p>
+    <p id="x"></p>
+    <p id="y"></p>
+<script>
+    var stud, a="", i;
+    stud = {
+        "name": "Abhi",
+        "age": 20,
+        "courses": "HTML"
+    };
+    var sh = JSON.stringify(stud);
+    document.getElementById("s").innerHTML=sh;
+    var ab = JSON.parse(sh);
+    document.getElementById("p").innerHTML = ab.name;
+    document.getElementById("x").innerHTML = ab.age;
+    document.getElementById("y").innerHTML = ab.courses;
+</script>
+</body>
+</html>
