@@ -1,0 +1,11 @@
+.container{
+    border: 8px solid white;
+}
+
+.row{
+    border: 4px solid wheat;
+}
+
+.col{
+    border: 4px solid white;
+}
