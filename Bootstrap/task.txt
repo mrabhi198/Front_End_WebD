@@ -3,3 +3,6 @@ create a container class, inside container class make use of block code class fo
 
 
 create a container class, inside that class create one button class name as btn btn-success dropdown toggle in this you have to create 6 dropdown items in which 6 car names will be shown 
+
+
+demonstrat the use of small (info) and large (information) button which has content of and then also explore dropup, dropleft and dropright 
