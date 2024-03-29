@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body {
+            background-image: url(img2.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+    <div class="container mt-5">
+        <h1>Task Management</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="taskInput">Add new task:</label>
+                <input type="text" id="taskInput" class="form-control">
+            </div>
+            <div class="col">
+                <label for="prioritySelect">Select Priority:</label>
+                <select id="prioritySelect" class="form-control" name="Select Priority">
+                    <option>High</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                </select>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary">Add Task</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Task:</h3>
+    </div>
+    <div class="container">
+        <table class="table table-border">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <script>
+const taskInput = document.getElementById('taskInput');
+const prioritySelect = document.getElementById('prioritySelect');
+const taskTableBody = document.querySelector('table tbody');
+let tasks = [];
+function addTask() {
+  if (taskInput.value.trim() === '') {
+    alert('Please enter a task');
+    return;
+  }
+  const newTask = {
+    id: Date.now(),
+    task: taskInput.value,
+    priority: prioritySelect.value,
+    status: 'pending'
+  };
+  tasks.push(newTask);
+  taskInput.value = '';
+  updateTaskTable();
+}
+function updateTaskTable() {
+  taskTableBody.innerHTML = '';
+  tasks.forEach(task => {
+    const row = `<tr>
+                  <td>${task.task}</td>
+                  <td>${task.priority}</td>
+                  <td>${task.status}</td>
+                  <td>
+                    <button class="btn btn-success" onclick="completeTask('${task.id}')">Complete</button>
+                    <button class="btn btn-danger" onclick="deleteTask('${task.id}')">Delete</button>
+                  </td>
+                </tr>`;
+    taskTableBody.innerHTML += row;
+  });
+}
+function completeTask(taskId) {
+  const taskIndex = tasks.findIndex(task => task.id === parseInt(taskId));
+  if (taskIndex !== -1) {
+    tasks[taskIndex].status = 'completed';
+  }
+  updateTaskTable();
+}
+function deleteTask(taskId) {
+  tasks = tasks.filter(task => task.id !== parseInt(taskId));
+  updateTaskTable();
+}
+document.querySelector('button').addEventListener('click', addTask);
+    </script>
+</body>
+</html>
